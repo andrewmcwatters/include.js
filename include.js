@@ -15,10 +15,12 @@
   function include() {
     var includes = document.querySelectorAll('[data-include]');
     for (var i = 0; i < includes.length; i++) {
-      var el = includes[i];
-      get(el.dataset.include, function(data) {
-        el.innerHTML = data;
-      });
+      (function() {
+        var el = includes[i];
+        get(el.dataset.include, function(data) {
+          el.innerHTML = data;
+        });
+      })();
     }
   }
 
