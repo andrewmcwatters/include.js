@@ -1,0 +1,19 @@
+{
+  "name": "include.js",
+  "version": "1.0.0",
+  "description": "Fetches and includes an external HTML fragment",
+  "main": "include.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://andrewmcwatters@github.com/andrewmcwatters/include.js.git"
+  },
+  "author": "Andrew McWatters",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andrewmcwatters/include.js/issues"
+  },
+  "homepage": "https://github.com/andrewmcwatters/include.js#readme"
+}
