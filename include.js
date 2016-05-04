@@ -15,8 +15,9 @@
   function include() {
     var includes = document.querySelectorAll('[data-include]');
     for (var i = 0; i < includes.length; i++) {
-      get(includes[i].dataset.include, function(data) {
-        includes[i].appendChild(data);
+      var el = includes[i];
+      get(el.dataset.include, function(data) {
+        el.innerHTML = data;
       });
     }
   }
