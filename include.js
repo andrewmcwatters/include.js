@@ -1,4 +1,6 @@
 (function(document) {
+  'use strict';
+
   function get(url, callback) {
     var request = new XMLHttpRequest();
     request.open('GET', url, true);
