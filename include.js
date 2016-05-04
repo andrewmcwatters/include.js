@@ -1,4 +1,4 @@
-(function(document, XMLHttpRequest) {
+(function(document) {
   function get(url, callback) {
     var request = new XMLHttpRequest();
     request.open('GET', url, true);
@@ -31,4 +31,4 @@
   }
 
   ready(include);
-})(document, XMLHttpRequest);
+})(document);
