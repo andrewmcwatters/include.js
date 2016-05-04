@@ -11,7 +11,7 @@ npm install andrewmcwatters/include.js
 
 ## Usage
 
-```javascript
+```html
 <ANY
   data-include="string">
 </ANY>
