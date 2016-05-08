@@ -21,7 +21,16 @@
         var el = includes[i];
         get(el.dataset.include, function(data) {
           el.innerHTML = data;
+
+          var event = new CustomEvent('includecontentloaded', { detail: {
+            src: el.dataset.include
+          } });
+          el.dispatchEvent(event);
         });
+        var event = new CustomEvent('includecontentrequested', { detail: {
+          src: el.dataset.include
+        } });
+        el.dispatchEvent(event);
       })();
     }
   }
