@@ -1,35 +1,36 @@
 (function(document) {
   'use strict';
 
-  function get(url, callback) {
-    var request = new XMLHttpRequest();
-    request.open('GET', url, true);
-
-    request.onload = function() {
-      if (this.status >= 200 && this.status < 400) {
-        callback(this.response, this.status, request);
-      }
-    };
-
-    request.send();
-  }
-
   function include() {
     var includes = document.querySelectorAll('[data-include]');
     for (var i = 0; i < includes.length; i++) {
       (function() {
         var el = includes[i];
-        get(el.dataset.include, function(data) {
-          el.innerHTML = data;
+        var request = new XMLHttpRequest();
+        var src = el.dataset.include;
+        request.open('GET', src, true);
 
-          var event = new CustomEvent('includecontentloaded', { detail: {
-            src: el.dataset.include
-          } });
+        var event;
+        var customEventInit = { detail: {
+          src: src
+        } };
+        request.onload = function() {
+          if (this.status >= 200 && this.status < 400) {
+            el.innerHTML = this.response;
+            event = new CustomEvent('includecontentloaded', customEventInit);
+          } else {
+            event = new CustomEvent('includecontenterror', customEventInit);
+          }
           el.dispatchEvent(event);
-        });
-        var event = new CustomEvent('includecontentrequested', { detail: {
-          src: el.dataset.include
-        } });
+        };
+
+        request.onerror = function() {
+          event = new CustomEvent('includecontenterror', customEventInit);
+          el.dispatchEvent(event);
+        };
+
+        request.send();
+        event = new CustomEvent('includecontentrequested', customEventInit);
         el.dispatchEvent(event);
       })();
     }
