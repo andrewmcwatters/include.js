@@ -1,4 +1,4 @@
-(function(document) {
+(function() {
   'use strict';
 
   function include() {
@@ -45,4 +45,4 @@
   }
 
   ready(include);
-})(document);
+})();

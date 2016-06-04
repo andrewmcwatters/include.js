@@ -23,6 +23,44 @@ npm install andrewmcwatters/include.js
 | ------------ | -------- | ------- |
 | data-include | `string` | URL     |
 
+## Events
+
+### includecontentrequested
+Dispatched every time the data-include content is requested.
+
+#### Target
+the element data-include was declared in
+
+### Parameters
+
+| Param | Type     | Details                 |
+| ----- | -------- | ----------------------- |
+| src   | `string` | URL of content to load. |
+
+### includecontentloaded
+Dispatched every time the data-include content is reloaded.
+
+#### Target
+the current element
+
+### Parameters
+
+| Param | Type     | Details                 |
+| ----- | -------- | ----------------------- |
+| src   | `string` | URL of content to load. |
+
+### includecontenterror
+Dispatched when a template HTTP request yields an erroneous response (status < 200 || status > 299)
+
+#### Target
+the element data-include was declared in
+
+### Parameters
+
+| Param | Type     | Details                 |
+| ----- | -------- | ----------------------- |
+| src   | `string` | URL of content to load. |
+
 ## License
 
 The MIT License
