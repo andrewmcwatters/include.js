@@ -41,7 +41,7 @@ the element data-include was declared in
 Dispatched every time the data-include content is reloaded.
 
 #### Target
-the current element
+the current data-include element
 
 ### Parameters
 
