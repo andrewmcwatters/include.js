@@ -45,4 +45,12 @@
   }
 
   ready(include);
+
+  var observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      console.log(mutation);
+    });
+  });
+
+  observer.observe(document.body, { attributes: true, subtree: true });
 })();
