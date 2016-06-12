@@ -7,9 +7,12 @@
     request.open('GET', src, true);
 
     var event;
-    var customEventInit = { detail: {
-      src: src
-    } };
+    var customEventInit = {
+      bubbles: true,
+      detail: {
+        src: src
+      }
+    };
     request.onload = function() {
       if (this.status >= 200 && this.status < 400) {
         el.innerHTML = this.response;
