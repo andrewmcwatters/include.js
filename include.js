@@ -52,5 +52,5 @@
     });
   });
 
-  observer.observe(document.body, { attributes: true, subtree: true });
+  observer.observe(document.body, { childList: true, subtree: true });
 })();
