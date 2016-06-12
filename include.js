@@ -47,7 +47,7 @@
 
   ready(includeAll);
 
-  function includeNodes(node) {
+  function update(node) {
     if (node.dataset && node.dataset.include) {
       include(node);
       return;
@@ -55,13 +55,13 @@
 
     var childNodes = node.childNodes;
     for (var i = 0; i < childNodes.length; i++) {
-      includeNodes(childNodes[i]);
+      update(childNodes[i]);
     }
   }
 
   var observer = new MutationObserver(function(mutations) {
     mutations.forEach(function(mutation) {
-      mutation.addedNodes.forEach(includeNodes);
+      mutation.addedNodes.forEach(update);
     });
   });
 
