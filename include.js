@@ -64,7 +64,7 @@
 
   var observer = new MutationObserver(function(mutations) {
     mutations.forEach(function(mutation) {
-      mutation.addedNodes.forEach(update);
+      Array.prototype.forEach.call(mutation.addedNodes, update);
     });
   });
 
