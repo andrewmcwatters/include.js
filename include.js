@@ -56,7 +56,9 @@
 
   function update(node) {
     if (node.dataset && node.dataset.include) {
-      include(node);
+      setTimeout(function() {
+        include(node);
+      });
       return;
     }
 
