@@ -20,12 +20,16 @@
       } else {
         event = new CustomEvent('includecontenterror', customEventInit);
       }
-      el.dispatchEvent(event);
+      setTimeout(function() {
+        el.dispatchEvent(event);
+      });
     };
 
     request.onerror = function() {
       event = new CustomEvent('includecontenterror', customEventInit);
-      el.dispatchEvent(event);
+      setTimeout(function() {
+        el.dispatchEvent(event);
+      });
     };
 
     request.send();
