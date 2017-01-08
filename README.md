@@ -2,15 +2,12 @@
 Fetches and includes an external HTML fragment
 
 ## Install
-
 ### npm
-
 ```shell
 npm install andrewmcwatters/include.js
 ```
 
 ## Usage
-
 ```html
 <ANY
   data-include="string">
@@ -18,13 +15,11 @@ npm install andrewmcwatters/include.js
 ```
 
 ### Arguments
-
 | Param        | Type     | Details |
 | ------------ | -------- | ------- |
 | data-include | `string` | URL     |
 
 ## Events
-
 ### includecontentrequested
 Dispatched every time the data-include content is requested.
 
@@ -32,7 +27,6 @@ Dispatched every time the data-include content is requested.
 the element data-include was declared in
 
 ### Parameters
-
 | Param | Type     | Details                 |
 | ----- | -------- | ----------------------- |
 | src   | `string` | URL of content to load. |
@@ -44,7 +38,6 @@ Dispatched every time the data-include content is reloaded.
 the current data-include element
 
 ### Parameters
-
 | Param | Type     | Details                 |
 | ----- | -------- | ----------------------- |
 | src   | `string` | URL of content to load. |
@@ -56,13 +49,11 @@ Dispatched when a template HTTP request yields an erroneous response (status < 2
 the element data-include was declared in
 
 ### Parameters
-
 | Param | Type     | Details                 |
 | ----- | -------- | ----------------------- |
 | src   | `string` | URL of content to load. |
 
 ## License
-
 The MIT License
 
 Copyright (c) 2017 Andrew McWatters. http://andrewmcwatters.com
