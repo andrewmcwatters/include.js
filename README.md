@@ -65,7 +65,7 @@ the element data-include was declared in
 
 The MIT License
 
-Copyright (c) 2016 Andrew McWatters. http://andrewmcwatters.com
+Copyright (c) 2017 Andrew McWatters. http://andrewmcwatters.com
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
