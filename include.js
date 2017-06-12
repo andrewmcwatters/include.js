@@ -44,7 +44,6 @@
 
     if (node.dataset && node.dataset.include) {
       include(node);
-      return;
     }
 
     var elements = node.querySelectorAll('[data-include]');
