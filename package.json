@@ -1,6 +1,6 @@
 {
   "name": "include.js",
-  "version": "1.4.8",
+  "version": "1.4.9",
   "description": "Fetches and includes an external HTML fragment",
   "main": "include.js",
   "scripts": {
