@@ -2,9 +2,9 @@
 Fetches and includes an external HTML fragment
 
 ## Install
-### npm
+### yarn
 ```shell
-npm install andrewmcwatters/include.js
+yarn add andrewmcwatters/include.js
 ```
 
 ## Usage
