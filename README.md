@@ -4,7 +4,7 @@ Fetches and includes an external HTML fragment
 ## Install
 ### yarn
 ```shell
-yarn add andrewmcwatters/include.js
+yarn add andrewmcwatters/include.js#v1.4.10
 ```
 
 ## Usage
